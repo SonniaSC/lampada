@@ -1,17 +1,29 @@
 var initLigth = document.getElementById("ligth");
 var initialize = true;
 
-initLigth.addEventListener("click", function() {
-  
-    if(initialize){
+let imgRotate = document.getElementById("ligth");
+let angle = 180;
+
+imgRotate.style.transform = `rotate(${angle}deg)`;
+
+
+initLigth.addEventListener("click", function () {
+
+    var body = document.body; 
+    
+    if (initialize) {
         initialize = false;
-        initLigth.src = "ligthoff.jpg";   
+        initLigth.src = "ligthoff.jpg";
+
+        body.style.background = "black";
     }
 
-    else{
+    else {
         initialize = true;
-        initLigth.src = "ligthon.jpg"; 
+        initLigth.src = "ligthon.jpg";
+
+        body.style.background = "white";
     };
-  });
+});
 
 
